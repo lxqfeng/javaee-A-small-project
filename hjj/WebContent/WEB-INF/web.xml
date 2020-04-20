@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>FirstTomcatProject</display-name>
+  
+  <!-- 设置Web应用的全局参数 -->
+	<context-param>
+		<param-name>appName</param-name>
+		<param-value>第一个Web应用</param-value>  
+	</context-param>  
+	<context-param>
+		<param-name>encoding</param-name>
+		<param-value>utf-8</param-value>  
+	</context-param> 
+  
+  	<!-- 说明Servlet类 -->
+	<servlet>
+		<!-- Servlet类的别名 -->
+		<servlet-name>FirstSimpleServlet</servlet-name>
+		<!--Servlet类的全名，包括所属的包名 -->
+		<servlet-class>servlets.FirstSimpleServlet</servlet-class>
+	</servlet>
+
+	<!-- 说明Servlet类与访问地址的映射 -->
+	<servlet-mapping>
+		<!-- Servlet类的别名，该别名与<servlet>元素中定义的Servlet类的别名一致 -->
+		<servlet-name>FirstSimpleServlet</servlet-name>
+		<!--访问Servlet类的地址 -->
+		<url-pattern>/myurl</url-pattern>
+	</servlet-mapping>  
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
